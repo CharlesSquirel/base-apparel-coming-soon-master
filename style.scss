@@ -15,6 +15,16 @@ body {
   width: 100%;
   overflow: hidden;
   height: 100%;
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    padding-top: 84px;
+    gap: 64px;
+  }
+  @media (max-width: 400px) {
+    gap: 22px;
+  }
 }
 
 .main-container {
@@ -26,6 +36,11 @@ body {
     padding-right: 30px;
     padding-left: 30px;
   }
+  @media (max-width: $mobile) {
+    padding: 0 32px;
+    align-items: center;
+    gap: 20px;
+  }
 }
 
 .title-text {
@@ -36,10 +51,21 @@ body {
   letter-spacing: 17px;
   display: flex;
   flex-direction: column;
+  @media (max-width: $mobile) {
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: 11px;
+    text-align: center;
+  }
   &__span {
     font-weight: 600;
     line-height: 71px;
     color: $neutral;
+    @media (max-width: $mobile) {
+      font-size: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+    }
   }
 }
 
@@ -47,6 +73,11 @@ body {
   font-weight: 400;
   line-height: 28px;
   color: $primary;
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+  }
 }
 
 // FORM MAIL
@@ -55,6 +86,9 @@ body {
   display: flex;
   align-items: center;
   width: 445px;
+  @media (max-width: $mobile) {
+    justify-content: center;
+  }
 }
 
 .mail-input {
@@ -64,7 +98,38 @@ body {
   border: 1px solid $primary;
   border-radius: 28px;
   padding-left: 32px;
-
+  &::-webkit-input-placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "Josefin Sans", sans-serif;
+    color: $primary;
+    opacity: 0.5;
+  }
+  &::-moz-placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "Josefin Sans", sans-serif;
+    color: $primary;
+    opacity: 0.5;
+  }
+  &:-ms-input-placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "Josefin Sans", sans-serif;
+    color: $primary;
+    opacity: 0.5;
+  }
+  &::-ms-input-placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "Josefin Sans", sans-serif;
+    color: $primary;
+    opacity: 0.5;
+  }
   &::placeholder {
     font-weight: 400;
     font-size: 16px;
@@ -72,6 +137,11 @@ body {
     font-family: "Josefin Sans", sans-serif;
     color: $primary;
     opacity: 0.5;
+  }
+  @media (max-width: $mobile) {
+    width: 311px;
+    height: 48px;
+    align-items: center;
   }
 }
 
@@ -82,7 +152,17 @@ body {
   box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
   border-radius: 28px;
   position: absolute;
-  right: 0;
+  right: -20px;
+  z-index: 1;
+  &:hover {
+    background: linear-gradient(135deg, #ffc7c7 0%, #ffcccc 100%);
+    border: none;
+  }
+  @media (max-width: $mobile) {
+    width: 64px;
+    height: 48px;
+    right: 56px;
+  }
 }
 
 .error-message {
@@ -90,23 +170,47 @@ body {
   font-size: 13px;
   line-height: 28px;
   color: $primary-soft;
-  display: none;
+  position: absolute;
+  left: 34px;
+  top: 66px;
+  //   display: none;
+  @media (max-width: $mobile) {
+    line-height: 13px;
+    left: 100px;
+  }
 }
 
 .error-img {
   position: absolute;
   right: 126px;
+  top: 14px;
   z-index: 1;
   display: none;
+  @media (max-width: $mobile) {
+    right: 142px;
+    top: 11px;
+  }
 }
 
 .logo-img {
   width: 158px;
   height: 33px;
   margin-bottom: 50px;
+  @media (max-width: $mobile) {
+    position: absolute;
+    top: 31px;
+    left: 32px;
+    width: 100px;
+    height: 20.89px;
+  }
 }
 
 .hero-img-desktop {
   width: 610px;
   height: 100%;
+}
+
+.hero-img-mobile {
+  width: 376px;
+  height: 250px;
 }
