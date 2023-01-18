@@ -8,20 +8,118 @@ button {
   border: none;
 }
 
+button,
+input {
+  cursor: pointer;
+}
+
 body {
   font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
   background: url("/images/bg-pattern-desktop.svg") no-repeat;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
 }
 
 .section-container {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
   overflow: hidden;
+  height: 100%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 74px 220px 152px 165px;
+  gap: 40px;
+}
+@media (max-width: 1439px) {
+  .main-container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+.title-text {
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 64px;
+  color: hsl(0deg, 36%, 70%);
+  letter-spacing: 17px;
+  display: flex;
+  flex-direction: column;
+}
+.title-text__span {
+  font-weight: 600;
+  line-height: 71px;
+  color: hsl(0deg, 6%, 24%);
+}
+
+.title-paragraph {
+  font-weight: 400;
+  line-height: 28px;
+  color: hsl(0deg, 36%, 70%);
+}
+
+.email-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 445px;
+}
+
+.mail-input {
+  width: 445px;
+  height: 56px;
+  opacity: 0.5;
+  border: 1px solid hsl(0deg, 36%, 70%);
+  border-radius: 28px;
+  padding-left: 32px;
+}
+.mail-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  font-family: "Josefin Sans", sans-serif;
+  color: hsl(0deg, 36%, 70%);
+  opacity: 0.5;
+}
+
+.btn {
+  width: 100px;
+  height: 56px;
+  background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+  box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+  border-radius: 28px;
+  position: absolute;
+  right: 0;
+}
+
+.error-message {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 28px;
+  color: hsl(0deg, 93%, 68%);
+  display: none;
+}
+
+.error-img {
+  position: absolute;
+  right: 126px;
+  z-index: 1;
+  display: none;
+}
+
+.logo-img {
+  width: 158px;
+  height: 33px;
+  margin-bottom: 50px;
 }
 
 .hero-img-desktop {
   width: 610px;
-  height: 800px;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
