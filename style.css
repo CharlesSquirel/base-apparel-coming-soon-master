@@ -1,1 +1,27 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  background: url("/images/bg-pattern-desktop.svg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.section-container {
+  display: flex;
+  overflow: hidden;
+}
+
+.hero-img-desktop {
+  width: 610px;
+  height: 800px;
+}/*# sourceMappingURL=style.css.map */

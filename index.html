@@ -3,15 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-
     <title>Frontend Mentor | Base Apparel coming soon page</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    We're coming soon Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals. Email Address
+    <section class="section-container">
+      <main class="main-container">
+        <img src="/images/logo.svg" alt="Base's logo" class="logo-img" />
+        <h1 class="title-text">WE'RE <span class="title-text__span">COMING SOON</span></h1>
+        <p class="title-paragraph">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        <form class="email-form">
+          <img class="error-img" src="/images/icon-error.svg" alt="" />
+          <input type="email" class="mail-input" placeholder="Email Address" />
+          <button class="btn"><img src="/images/icon-arrow.svg" alt="" /></button>
+          <p class="error-message">Please provide a valid email</p>
+        </form>
+      </main>
+      <picture class="hero-img-picture">
+        <source class="hero-img-mobile" srcset="/images/hero-mobile.jpg" media="(max-width: 678px)" />
+        <img class="hero-img-dekstop" src="/images/hero-desktop.jpg" alt="Woman in orange shirt" />
+      </picture>
+    </section>
   </body>
 </html>

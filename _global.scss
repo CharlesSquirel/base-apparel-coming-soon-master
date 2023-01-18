@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+}
+
+$primary: hsl(0, 36%, 70%);
+$primary-soft: hsl(0, 93%, 68%);
+$neutral: hsl(0, 6%, 24%);
+$mobile: 678px;
