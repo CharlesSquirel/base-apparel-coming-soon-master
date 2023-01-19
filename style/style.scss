@@ -1,22 +1,9 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  border: none;
-}
-
-button,
-input {
-  cursor: pointer;
-}
+@import "_global.scss";
 
 body {
   font-size: 16px;
   font-family: "Josefin Sans", sans-serif;
-  background: url("/images/bg-pattern-desktop.svg") no-repeat;
+  background: url("../images/bg-pattern-desktop.svg") no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -28,18 +15,14 @@ body {
   width: 100%;
   overflow: hidden;
   height: 100%;
-}
-@media (max-width: 500px) {
-  .section-container {
+  @media (max-width: $mobile) {
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-end;
     padding-top: 84px;
     gap: 64px;
   }
-}
-@media (max-width: 400px) {
-  .section-container {
+  @media (max-width: 400px) {
     gap: 22px;
   }
 }
@@ -49,15 +32,11 @@ body {
   flex-direction: column;
   padding: 74px 220px 152px 165px;
   gap: 40px;
-}
-@media (max-width: 1439px) {
-  .main-container {
+  @media (max-width: 1439px) {
     padding-right: 30px;
     padding-left: 30px;
   }
-}
-@media (max-width: 500px) {
-  .main-container {
+  @media (max-width: $mobile) {
     padding: 0 32px;
     align-items: center;
     gap: 20px;
@@ -68,53 +47,46 @@ body {
   font-weight: 300;
   font-size: 64px;
   line-height: 64px;
-  color: hsl(0deg, 36%, 70%);
+  color: $primary;
   letter-spacing: 17px;
   display: flex;
   flex-direction: column;
-}
-@media (max-width: 500px) {
-  .title-text {
+  @media (max-width: $mobile) {
     font-size: 40px;
     line-height: 42px;
     letter-spacing: 11px;
     text-align: center;
   }
-}
-.title-text__span {
-  font-weight: 600;
-  line-height: 71px;
-  color: hsl(0deg, 6%, 24%);
-}
-@media (max-width: 500px) {
-  .title-text__span {
-    font-size: inherit;
-    line-height: inherit;
-    letter-spacing: inherit;
+  &__span {
+    font-weight: 600;
+    line-height: 71px;
+    color: $neutral;
+    @media (max-width: $mobile) {
+      font-size: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
+    }
   }
 }
 
 .title-paragraph {
   font-weight: 400;
   line-height: 28px;
-  color: hsl(0deg, 36%, 70%);
-}
-@media (max-width: 500px) {
-  .title-paragraph {
+  color: $primary;
+  @media (max-width: $mobile) {
     font-size: 14px;
     line-height: 22px;
     text-align: center;
   }
 }
 
+// FORM MAIL
 .email-form {
   position: relative;
   display: flex;
   align-items: center;
   width: 445px;
-}
-@media (max-width: 500px) {
-  .email-form {
+  @media (max-width: $mobile) {
     justify-content: center;
   }
 }
@@ -123,52 +95,50 @@ body {
   width: 445px;
   height: 56px;
   opacity: 0.5;
-  border: 1px solid hsl(0deg, 36%, 70%);
+  border: 1px solid $primary;
   border-radius: 28px;
   padding-left: 32px;
-}
-.mail-input::-webkit-input-placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  font-family: "Josefin Sans", sans-serif;
-  color: hsl(0deg, 36%, 70%);
-  opacity: 0.5;
-}
-.mail-input::-moz-placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  font-family: "Josefin Sans", sans-serif;
-  color: hsl(0deg, 36%, 70%);
-  opacity: 0.5;
-}
-.mail-input:-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  font-family: "Josefin Sans", sans-serif;
-  color: hsl(0deg, 36%, 70%);
-  opacity: 0.5;
-}
-.mail-input::-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  font-family: "Josefin Sans", sans-serif;
-  color: hsl(0deg, 36%, 70%);
-  opacity: 0.5;
-}
-.mail-input::placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  font-family: "Josefin Sans", sans-serif;
-  color: hsl(0deg, 36%, 70%);
-  opacity: 0.5;
-}
-@media (max-width: 500px) {
-  .mail-input {
+  &::-webkit-input-placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "Josefin Sans", sans-serif;
+    color: $primary;
+    opacity: 0.5;
+  }
+  &::-moz-placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "Josefin Sans", sans-serif;
+    color: $primary;
+    opacity: 0.5;
+  }
+  &:-ms-input-placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "Josefin Sans", sans-serif;
+    color: $primary;
+    opacity: 0.5;
+  }
+  &::-ms-input-placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "Josefin Sans", sans-serif;
+    color: $primary;
+    opacity: 0.5;
+  }
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    font-family: "Josefin Sans", sans-serif;
+    color: $primary;
+    opacity: 0.5;
+  }
+  @media (max-width: $mobile) {
     width: 311px;
     height: 48px;
     align-items: center;
@@ -184,13 +154,11 @@ body {
   position: absolute;
   right: -20px;
   z-index: 1;
-}
-.btn:hover {
-  background: linear-gradient(135deg, #ffc7c7 0%, #ffcccc 100%);
-  border: none;
-}
-@media (max-width: 500px) {
-  .btn {
+  &:hover {
+    background: linear-gradient(135deg, #ffc7c7 0%, #ffcccc 100%);
+    border: none;
+  }
+  @media (max-width: $mobile) {
     width: 64px;
     height: 48px;
     right: 56px;
@@ -201,13 +169,12 @@ body {
   font-weight: 400;
   font-size: 13px;
   line-height: 28px;
-  color: hsl(0deg, 93%, 68%);
+  color: $primary-soft;
   position: absolute;
   left: 34px;
   top: 66px;
-}
-@media (max-width: 500px) {
-  .error-message {
+  display: none;
+  @media (max-width: $mobile) {
     line-height: 13px;
     left: 100px;
   }
@@ -219,9 +186,7 @@ body {
   top: 14px;
   z-index: 1;
   display: none;
-}
-@media (max-width: 500px) {
-  .error-img {
+  @media (max-width: $mobile) {
     right: 142px;
     top: 11px;
   }
@@ -231,9 +196,7 @@ body {
   width: 158px;
   height: 33px;
   margin-bottom: 50px;
-}
-@media (max-width: 500px) {
-  .logo-img {
+  @media (max-width: $mobile) {
     position: absolute;
     top: 31px;
     left: 32px;
@@ -250,4 +213,4 @@ body {
 .hero-img-mobile {
   width: 376px;
   height: 250px;
-}/*# sourceMappingURL=style.css.map */
+}
