@@ -1,0 +1,110 @@
+.email-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 445px;
+    @media (max-width: $mobile) {
+      justify-content: center;
+    }
+  }
+  
+  .mail-input {
+    width: 445px;
+    height: 56px;
+    opacity: 0.5;
+    border: 1px solid $primary;
+    border-radius: 28px;
+    padding-left: 32px;
+    &::-webkit-input-placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      font-family: "Josefin Sans", sans-serif;
+      color: $primary;
+      opacity: 0.5;
+    }
+    &::-moz-placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      font-family: "Josefin Sans", sans-serif;
+      color: $primary;
+      opacity: 0.5;
+    }
+    &:-ms-input-placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      font-family: "Josefin Sans", sans-serif;
+      color: $primary;
+      opacity: 0.5;
+    }
+    &::-ms-input-placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      font-family: "Josefin Sans", sans-serif;
+      color: $primary;
+      opacity: 0.5;
+    }
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      font-family: "Josefin Sans", sans-serif;
+      color: $primary;
+      opacity: 0.5;
+    }
+    @media (max-width: $mobile) {
+      width: 311px;
+      height: 48px;
+      align-items: center;
+    }
+  }
+  
+  .btn {
+    width: 100px;
+    height: 56px;
+    background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+    box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+    border-radius: 28px;
+    position: absolute;
+    right: -20px;
+    z-index: 1;
+    &:hover {
+      background: linear-gradient(135deg, #ffc7c7 0%, #ffcccc 100%);
+      border: none;
+    }
+    @media (max-width: $mobile) {
+      width: 64px;
+      height: 48px;
+      right: 56px;
+    }
+  }
+  
+  .error-message {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 28px;
+    color: $primary-soft;
+    position: absolute;
+    left: 34px;
+    top: 66px;
+    display: none;
+    @media (max-width: $mobile) {
+      line-height: 13px;
+      left: 100px;
+    }
+  }
+  
+  .error-img {
+    position: absolute;
+    right: 126px;
+    top: 14px;
+    z-index: 1;
+    display: none;
+    @media (max-width: $mobile) {
+      right: 142px;
+      top: 11px;
+    }
+  }
