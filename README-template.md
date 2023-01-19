@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/CharlesSquirel/base-apparel-coming-soon-master
+- Live Site URL: https://base-apparel-coming-soon-master-sooty.vercel.app/
 
 ## My process
 
@@ -43,8 +43,9 @@ Users should be able to:
 
 1. I have skilled my RWD approach.
 2. I have practiced JS custom validation form with RegExp.
+3. I have practiced partials in SCSS.
 
 ## Author
 
-- Frontend Mentor -
-- Github -
+- Frontend Mentor - https://www.frontendmentor.io/profile/CharlesSquirel
+- Github - https://github.com/CharlesSquirel
